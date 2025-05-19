@@ -1,5 +1,5 @@
 import Navbar from "../components/Navbar"
-// import HeroSection from "../components/HeroSection"
+import HeroSection from "../components/HeroSection"
 // import AboutSection from "../components/AboutSection"
 // import SkillsSection from "../components/SkillsSection"
 // import ProjectsSection from "../components/ProjectsSection"
@@ -7,7 +7,6 @@ import Navbar from "../components/Navbar"
 // import ContactSection from "../components/ContactSection"
 // import Footer from "../components/Footer"
 import { ConstellationBackground, FloatingShapes, TechShapes } from "../components/BackgroundElements"
-// import ChaosCursor from "../components/ChaosCursor"
 
 export default function HomePage() {
   return (
@@ -15,11 +14,11 @@ export default function HomePage() {
       <ConstellationBackground />
       <FloatingShapes />
       <TechShapes />
-      {/* <ChaosCursor /> */}
      
       <Navbar /> 
       <div className="container">
-        {/* <HeroSection />
+        <HeroSection />
+        {/* 
         <AboutSection />
         <SkillsSection />
         <ProjectsSection />
