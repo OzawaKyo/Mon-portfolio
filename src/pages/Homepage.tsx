@@ -1,6 +1,6 @@
 import Navbar from "../components/Navbar"
 import HeroSection from "../components/HeroSection"
-// import AboutSection from "../components/AboutSection"
+import AboutSection from "../components/AboutSection"
 // import SkillsSection from "../components/SkillsSection"
 // import ProjectsSection from "../components/ProjectsSection"
 // import ExperienceSection from "../components/ExperienceSection"
@@ -18,8 +18,8 @@ export default function HomePage() {
       <Navbar /> 
       <div className="container">
         <HeroSection />
-        {/* 
         <AboutSection />
+        {/* 
         <SkillsSection />
         <ProjectsSection />
         <ExperienceSection />
