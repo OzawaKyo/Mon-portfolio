@@ -1,0 +1,384 @@
+.experience-section {
+    padding: 5rem 0;
+    background: linear-gradient(to right, #f0f9ff, #ffffff, #fff7ed);
+    border-radius: 1.5rem;
+    margin: 2.5rem 0;
+  }
+  
+  .dark .experience-section {
+    background: linear-gradient(to right, rgba(17, 24, 39, 0.8), rgba(17, 24, 39, 0.5), rgba(17, 24, 39, 0.8));
+  }
+  
+  .section-header {
+    text-align: center;
+    margin-bottom: 4rem;
+  }
+  
+  .section-title {
+    font-size: 2.25rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    background: linear-gradient(to right, #3b82f6, #8b5cf6, #f97316);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+  
+  .dark .section-title {
+    background: linear-gradient(to right, #60a5fa, #a78bfa, #fb923c);
+    -webkit-background-clip: text;
+    background-clip: text;
+  }
+  
+  .section-divider {
+    width: 5rem;
+    height: 0.25rem;
+    background: linear-gradient(to right, #3b82f6, #8b5cf6, #f97316);
+    margin: 0 auto 1.5rem;
+    border-radius: 9999px;
+  }
+  
+  .section-description {
+    max-width: 32rem;
+    margin: 0 auto;
+    color: #4b5563;
+  }
+  
+  .dark .section-description {
+    color: #9ca3af;
+  }
+  
+  .timeline-container {
+    position: relative;
+    padding-bottom: 2rem;
+  }
+  
+  .timeline-line {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    height: calc(100% - 8rem);
+    width: 0.25rem;
+    background: linear-gradient(to bottom, #3b82f6, #8b5cf6, #f97316);
+    border-radius: 9999px;
+    display: none;
+  }
+  
+  @media (min-width: 768px) {
+    .timeline-line {
+      display: block;
+    }
+  }
+  
+  .timeline-item {
+    margin-bottom: 3rem;
+    position: relative;
+  }
+  
+  .timeline-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  @media (min-width: 768px) {
+    .timeline-content {
+      flex-direction: row;
+    }
+  }
+  
+  .timeline-left {
+    width: 100%;
+    padding-right: 0;
+    margin-bottom: 2rem;
+    text-align: left;
+  }
+  
+  @media (min-width: 768px) {
+    .timeline-left {
+      width: 50%;
+      padding-right: 3rem;
+      margin-bottom: 0;
+      text-align: right;
+    }
+  }
+  
+  .timeline-right {
+    width: 100%;
+    padding-left: 0;
+  }
+  
+  @media (min-width: 768px) {
+    .timeline-right {
+      width: 50%;
+      padding-left: 3rem;
+    }
+  }
+  
+  .timeline-dot {
+    display: none;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 2rem;
+    height: 2rem;
+    background-color: white;
+    border: 0.25rem solid #f97316;
+    border-radius: 50%;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  @media (min-width: 768px) {
+    .timeline-dot {
+      display: flex;
+    }
+  }
+  
+  .dark .timeline-dot {
+    background-color: #1f2937;
+  }
+  
+  .timeline-dot-content {
+    font-size: 1rem;
+  }
+  
+  .experience-card {
+    background-color: white;
+    border-radius: 1rem;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+    overflow: hidden;
+    transition: all 0.3s ease;
+  }
+  
+  .experience-card:hover {
+    transform: translateY(-5px) rotate(1deg);
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  }
+  
+  .dark .experience-card {
+    background-color: #1f2937;
+  }
+  
+  .card-header {
+    padding: 1.5rem 1.5rem 0.5rem;
+  }
+  
+  .experience-title {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: #1f2937;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+  }
+  
+  @media (min-width: 768px) {
+    .experience-title {
+      justify-content: flex-end;
+    }
+  }
+  
+  .dark .experience-title {
+    color: #f9fafb;
+  }
+  
+  .experience-icon {
+    width: 1.25rem;
+    height: 1.25rem;
+    margin-right: 0.5rem;
+  }
+  
+  .experience-icon-orange {
+    color: #f97316;
+  }
+  
+  .experience-emoji {
+    margin-left: 0.5rem;
+    font-size: 1.25rem;
+  }
+  
+  .experience-company {
+    font-size: 1rem;
+    font-weight: 500;
+    color: #4b5563;
+    text-align: right;
+  }
+  
+  .dark .experience-company {
+    color: #9ca3af;
+  }
+  
+  .card-content {
+    padding: 0.5rem 1.5rem 1.5rem;
+  }
+  
+  .experience-period,
+  .experience-location {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    font-size: 0.875rem;
+    color: #6b7280;
+    margin-bottom: 0.5rem;
+  }
+  
+  .dark .experience-period,
+  .dark .experience-location {
+    color: #9ca3af;
+  }
+  
+  .period-icon,
+  .location-icon {
+    margin-left: 0.25rem;
+  }
+  
+  .experience-details {
+    background-color: white;
+    border-radius: 1rem;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+    padding: 1.5rem;
+    transition: all 0.3s ease;
+  }
+  
+  .experience-details:hover {
+    transform: scale(1.03);
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  }
+  
+  .dark .experience-details {
+    background-color: #1f2937;
+  }
+  
+  .experience-description {
+    color: #4b5563;
+    margin-bottom: 1rem;
+  }
+  
+  .dark .experience-description {
+    color: #d1d5db;
+  }
+  
+  .experience-skills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+  
+  .experience-skill {
+    padding: 0.25rem 0.75rem;
+    font-size: 0.75rem;
+    font-weight: 500;
+    border-radius: 9999px;
+  }
+  
+  .experience-skill-orange {
+    background-color: rgba(249, 115, 22, 0.1);
+    color: #f97316;
+  }
+  
+  .dark .experience-skill-orange {
+    background-color: rgba(249, 115, 22, 0.3);
+    color: #fb923c;
+  }
+  
+  .looking-for-job {
+    margin-top: 2rem;
+    text-align: center;
+    position: relative;
+    z-index: 2;
+    background: linear-gradient(to right, #f0f9ff, #ffffff, #fff7ed);
+    padding: 1rem 0;
+    border-radius: 1rem;
+  }
+  
+  .dark .looking-for-job {
+    background: linear-gradient(to right, rgba(17, 24, 39, 0.8), rgba(17, 24, 39, 0.5), rgba(17, 24, 39, 0.8));
+  }
+  
+  .job-alert {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 1rem 1.5rem;
+    background: linear-gradient(135deg, rgba(59, 130, 246, 0.15), rgba(249, 115, 22, 0.15));
+    /* backdrop-filter: blur(8px); */
+    border-radius: 9999px;
+    font-size: 1rem;
+    color: #1f2937;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    transition: all 0.3s ease;
+  }
+  
+  .job-alert:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 8px -1px rgba(0, 0, 0, 0.1), 0 4px 6px -1px rgba(0, 0, 0, 0.06);
+    background: linear-gradient(135deg, rgba(59, 130, 246, 0.2), rgba(249, 115, 22, 0.2));
+  }
+  
+  .job-icon {
+    width: 1.25rem;
+    height: 1.25rem;
+    color: #3b82f6;
+    transition: transform 0.3s ease;
+  }
+  
+  .job-alert:hover .job-icon {
+    transform: translateY(-2px) rotate(45deg);
+  }
+  
+  .dark .job-alert {
+    background: linear-gradient(to right, rgba(30, 58, 138, 0.3), rgba(67, 56, 202, 0.3), rgba(154, 52, 18, 0.3));
+    color: #60a5fa;
+  }
+  
+  .dark.job-icon {
+    color: #fb923c;
+  }
+  
+  .chaos-mode .section-title,
+  .chaos-mode .section-divider {
+    background: linear-gradient(to right, #ec4899, #8b5cf6, #06b6d4);
+  }
+  
+  .dark.chaos-mode .section-title {
+    background: linear-gradient(to right, #f472b6, #a78bfa, #22d3ee);
+  }
+  
+  .chaos-mode .timeline-line {
+    background: linear-gradient(to bottom, #ec4899, #8b5cf6, #06b6d4);
+  }
+  
+  .chaos-mode .timeline-dot {
+    border-color: #ec4899;
+  }
+  
+  .chaos-mode .job-alert {
+    background: linear-gradient(to right, #fce7f3, #e0e7ff, #e0f2fe);
+    color: #ec4899;
+  }
+  
+  .dark.chaos-mode .job-alert {
+    background: linear-gradient(to right, rgba(157, 23, 77, 0.3), rgba(67, 56, 202, 0.3), rgba(8, 145, 178, 0.3));
+    color: #f472b6;
+  }
+  
+  .chaos-mode .job-icon {
+    color: #06b6d4;
+  }
+  
+  .dark.chaos-mode .job-icon {
+    color: #22d3ee;
+  }
+  
+  .chaos-mode .experience-section {
+    background: linear-gradient(to right, #fdf2f8, #ffffff, #f0f9ff);
+  }
+  
+  .dark.chaos-mode .experience-section {
+    background: linear-gradient(to right, rgba(76, 29, 149, 0.8), rgba(17, 24, 39, 0.5), rgba(31, 41, 55, 0.8));
+  }
+  

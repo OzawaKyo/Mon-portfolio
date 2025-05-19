@@ -1,0 +1,129 @@
+/* Styles de base pour le curseur */
+.custom-cursor-main {
+    position: fixed;
+    pointer-events: none;
+    z-index: 9999;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    mix-blend-mode: difference;
+}
+
+.custom-cursor-ring {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    border: 2px solid rgba(219, 234, 254, 0.9);
+    box-sizing: border-box;
+}
+
+.chaos-custom-cursor .custom-cursor-ring {
+    border: 2px solid #ec4899;
+    box-shadow: 0 0 10px rgba(236, 72, 153, 0.5);
+}
+
+.custom-cursor-dot {
+    width: 8px;
+    height: 8px;
+    background-color: rgba(219, 234, 254, 0.9);
+    border-radius: 50%;
+    position: absolute;
+}
+
+.chaos-custom-cursor .custom-cursor-dot {
+    background-color: #ec4899;
+}
+
+.custom-cursor-clicked .custom-cursor-ring {
+    border-width: 4px;
+}
+
+/* Traînées du curseur */
+.custom-cursor-trail {
+    position: fixed;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    pointer-events: none;
+    z-index: 9998;
+    transition: opacity 0.2s ease;
+    mix-blend-mode: difference;
+}
+
+.chaos-custom-trail {
+    border-color: rgba(236, 72, 153, 0.5);
+    mix-blend-mode: normal;
+}
+
+/* Particules autour du curseur */
+.custom-cursor-particles {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.custom-cursor-particle {
+    position: absolute;
+    width: 4px;
+    height: 4px;
+    background-color: rgba(219, 234, 254, 0.9);
+    border-radius: 50%;
+    top: 50%;
+    left: 50%;
+    margin-top: -2px;
+    margin-left: -2px;
+}
+
+.chaos-custom-cursor .custom-cursor-particle {
+    background-color: #ec4899;
+    box-shadow: 0 0 5px rgba(236, 72, 153, 0.8);
+}
+
+/* Effet de flou qui suit le curseur */
+.custom-cursor-blur {
+    position: fixed;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(59, 130, 246, 0.15) 0%, rgba(59, 130, 246, 0) 70%);
+    pointer-events: none;
+    z-index: 9997;
+    opacity: 0.7;
+    filter: blur(20px);
+}
+
+.chaos-custom-blur {
+    background: radial-gradient(circle, rgba(236, 72, 153, 0.15) 0%, rgba(236, 72, 153, 0) 70%);
+}
+
+/* Effets spéciaux pour les éléments interactifs */
+a:hover,
+button:hover,
+.clickable:hover {
+    cursor: none;
+    transition: transform 0.3s ease;
+}
+
+/* Animation pour les éléments interactifs */
+@keyframes custom-cursor-pulse-border {
+    0%,
+    100% {
+        box-shadow: 0 0 0 0 rgba(59, 130, 246, 0.4);
+    }
+    50% {
+        box-shadow: 0 0 0 5px rgba(59, 130, 246, 0);
+    }
+}
+
+/* Adaptation pour les appareils tactiles */
+@media (max-width: 768px) {
+    .custom-cursor-main,
+    .custom-cursor-trail,
+    .custom-cursor-blur {
+        display: none;
+    }
+}
+  

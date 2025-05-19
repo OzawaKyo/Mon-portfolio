@@ -240,7 +240,7 @@ const HeroSection = () => {
                 animate={{ y: [0, 10, 0] }}
                 transition={{ repeat: Number.POSITIVE_INFINITY, duration: 2.5, ease: "easeInOut", delay: 0.5 }}
               >
-                "🎮"
+                🎮
               </motion.div>
 
               <motion.div
