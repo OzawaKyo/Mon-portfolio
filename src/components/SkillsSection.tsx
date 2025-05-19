@@ -1,5 +1,3 @@
-"use client"
-
 import { motion, useInView } from "framer-motion"
 import { useEffect, useRef } from "react"
 import "./SkillsSection.css"
