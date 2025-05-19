@@ -6,17 +6,17 @@ import Navbar from "../components/Navbar"
 // import ExperienceSection from "../components/ExperienceSection"
 // import ContactSection from "../components/ContactSection"
 // import Footer from "../components/Footer"
-// import { ConstellationBackground, FloatingShapes, TechShapes } from "../components/BackgroundElements"
+import { ConstellationBackground, FloatingShapes, TechShapes } from "../components/BackgroundElements"
 // import ChaosCursor from "../components/ChaosCursor"
 
 export default function HomePage() {
   return (
     <main className="home-page">
-      {/* <ConstellationBackground />
+      <ConstellationBackground />
       <FloatingShapes />
       <TechShapes />
-      <ChaosCursor />
-      */}
+      {/* <ChaosCursor /> */}
+     
       <Navbar /> 
       <div className="container">
         {/* <HeroSection />

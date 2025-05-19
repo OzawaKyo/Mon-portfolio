@@ -1,0 +1,186 @@
+.constellation {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 0;
+  overflow: hidden;
+  opacity: 0.5;
+}
+
+.star {
+  position: absolute;
+  background-color: white;
+  border-radius: 50%;
+}
+
+.line {
+  position: absolute;
+  background-color: rgba(255, 255, 255, 0.2);
+  transform-origin: 0 0;
+}
+
+.floating-shapes {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.floating-shape {
+  position: absolute;
+  border-radius: 50%;
+}
+
+.shape-blue {
+  width: 16rem;
+  height: 16rem;
+  background: linear-gradient(to right, rgba(147, 197, 253, 0.1), rgba(167, 139, 250, 0.1));
+  top: 10%;
+  left: 5%;
+}
+
+.dark .shape-blue {
+  background: linear-gradient(to right, rgba(59, 130, 246, 0.05), rgba(139, 92, 246, 0.05));
+}
+
+.shape-orange {
+  width: 12rem;
+  height: 12rem;
+  background: linear-gradient(to right, rgba(251, 146, 60, 0.1), rgba(250, 204, 21, 0.1));
+  top: 30%;
+  right: 10%;
+}
+
+.dark .shape-orange {
+  background: linear-gradient(to right, rgba(249, 115, 22, 0.05), rgba(234, 179, 8, 0.05));
+}
+
+.shape-purple {
+  width: 8rem;
+  height: 8rem;
+  background: linear-gradient(to right, rgba(167, 139, 250, 0.1), rgba(244, 114, 182, 0.1));
+  bottom: 15%;
+  left: 15%;
+}
+
+.dark .shape-purple {
+  background: linear-gradient(to right, rgba(139, 92, 246, 0.05), rgba(236, 72, 153, 0.05));
+}
+
+.shape-cyan {
+  width: 10rem;
+  height: 10rem;
+  background: linear-gradient(to right, rgba(59, 130, 246, 0.1), rgba(6, 182, 212, 0.1));
+  bottom: 20%;
+  right: 20%;
+}
+
+.dark .shape-cyan {
+  background: linear-gradient(to right, rgba(59, 130, 246, 0.05), rgba(8, 145, 178, 0.05));
+}
+
+.tech-shapes {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.tech-shape {
+  position: absolute;
+  border: 2px solid;
+}
+
+.tech-shape-1 {
+  width: 4rem;
+  height: 4rem;
+  border-color: rgba(59, 130, 246, 0.2);
+  top: 20%;
+  left: 10%;
+  border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+}
+
+.dark .tech-shape-1 {
+  border-color: rgba(59, 130, 246, 0.1);
+}
+
+.tech-shape-2 {
+  width: 3rem;
+  height: 3rem;
+  border-color: rgba(139, 92, 246, 0.2);
+  top: 60%;
+  left: 20%;
+  border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+}
+
+.dark .tech-shape-2 {
+  border-color: rgba(139, 92, 246, 0.1);
+}
+
+.tech-shape-3 {
+  width: 5rem;
+  height: 5rem;
+  border-color: rgba(249, 115, 22, 0.2);
+  top: 30%;
+  right: 15%;
+  border-radius: 40% 60% 60% 40% / 40% 60% 40% 60%;
+}
+
+.dark .tech-shape-3 {
+  border-color: rgba(249, 115, 22, 0.1);
+}
+
+.tech-pixel {
+  position: absolute;
+  border-radius: 0.25rem;
+}
+
+.pixel-1 {
+  width: 0.75rem;
+  height: 0.75rem;
+  background-color: rgba(59, 130, 246, 0.2);
+  top: 25%;
+  left: 30%;
+}
+
+.dark .pixel-1 {
+  background-color: rgba(59, 130, 246, 0.1);
+}
+
+.pixel-2 {
+  width: 0.5rem;
+  height: 0.5rem;
+  background-color: rgba(139, 92, 246, 0.2);
+  top: 40%;
+  left: 70%;
+}
+
+.dark .pixel-2 {
+  background-color: rgba(139, 92, 246, 0.1);
+}
+
+.pixel-3 {
+  width: 1rem;
+  height: 1rem;
+  background-color: rgba(249, 115, 22, 0.2);
+  top: 70%;
+  left: 60%;
+}
+
+.dark .pixel-3 {
+  background-color: rgba(249, 115, 22, 0.1);
+}
+
+.pixel-4 {
+  width: 0.75rem;
+  height: 0.75rem;
+  background-color: rgba(250, 204, 21, 0.2);
+  top: 85%;
+  left: 25%;
+}
+
+.dark .pixel-4 {
+  background-color: rgba(250, 204, 21, 0.1);
+}
