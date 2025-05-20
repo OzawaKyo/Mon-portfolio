@@ -78,6 +78,20 @@
   padding: 2rem;
 }
 
+@media (max-width: 768px) {
+  .card-content {
+    text-align: center;
+  }
+
+  .card-icon-container {
+    margin: 0 auto 1rem;
+  }
+
+  .card-title {
+    justify-content: center;
+  }
+}
+
 .card-title {
   font-size: 1.5rem;
   font-weight: 700;
