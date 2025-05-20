@@ -34,8 +34,6 @@
   right: 15%;
 }
 
-
-
 .shape-3 {
   width: 12rem;
   height: 12rem;
@@ -44,24 +42,30 @@
   right: 25%;
 }
 
+@media (max-width: 768px) {
+  .shape-2, .shape-3 {
+    display: none;
+  }
+  
+  .shape-1 {
+    width: 12rem;
+    height: 12rem;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
 
 .chaos-shape-1 {
   background-color: rgba(244, 114, 182, 0.2);
 }
 
-
-
 .chaos-shape-2 {
   background-color: rgba(6, 182, 212, 0.2);
 }
 
-
-
 .chaos-shape-3 {
   background-color: rgba(139, 92, 246, 0.2);
 }
-
-
 
 .hero-container {
   position: relative;
@@ -105,14 +109,10 @@
   margin-bottom: 1rem;
 }
 
-
-
 .chaos-badge {
   background: linear-gradient(to right, rgba(252, 231, 243, 1), rgba(224, 242, 254, 1));
   color: rgba(219, 39, 119, 1);
 }
-
-
 
 .badge-content {
   display: flex;
@@ -150,15 +150,11 @@
   }
 }
 
-
-
 .chaos-title {
   background: linear-gradient(to right, rgba(236, 72, 153, 1), rgba(139, 92, 246, 1), rgba(6, 182, 212, 1));
   -webkit-background-clip: text;
   background-clip: text;
 }
-
-
 
 .hero-subtitle {
   font-size: 1.25rem;
@@ -172,14 +168,11 @@
   }
 }
 
-
 .hero-description {
   color: rgba(107, 114, 128, 1);
   margin-bottom: 2rem;
   max-width: 33rem;
 }
-
-
 
 .hero-buttons {
   display: flex;
@@ -229,14 +222,10 @@
   transition: all 0.3s;
 }
 
-
-
 .outline-button:hover {
   transform: scale(1.03);
   background-color: rgba(243, 244, 246, 1);
 }
-
-
 
 .ghost-button {
   display: inline-flex;
@@ -252,25 +241,17 @@
   transition: all 0.3s;
 }
 
-
-
 .ghost-button:hover {
   background-color: rgba(255, 237, 213, 1);
 }
-
-
 
 .chaos-ghost-button {
   color: rgba(236, 72, 153, 1);
 }
 
-
-
 .chaos-ghost-button:hover {
   background-color: rgba(252, 231, 243, 1);
 }
-
-
 
 .button-icon {
   margin-right: 0.5rem;
@@ -294,14 +275,10 @@
   transition: all 0.3s;
 }
 
-
-
 .social-link:hover {
   transform: rotate(15deg);
   color: rgba(59, 130, 246, 1);
 }
-
-
 
 .hero-avatar {
   flex: 1;
@@ -345,7 +322,6 @@
   align-items: center;
   justify-content: center;
 }
-
 
 .avatar-img {
   width: 100%;
@@ -416,21 +392,15 @@
   margin-bottom: 0.5rem;
 }
 
-
-
 .scroll-icon-container {
   padding: 0.5rem;
   border-radius: 9999px;
   background: linear-gradient(to right, rgba(219, 234, 254, 1), rgba(224, 231, 255, 1));
 }
 
-
-
 .chaos-scroll-icon {
   background: linear-gradient(to right, rgba(252, 231, 243, 1), rgba(224, 242, 254, 1));
 }
-
-
 
 .scroll-icon {
   width: 1.5rem;
@@ -438,13 +408,9 @@
   color: rgba(59, 130, 246, 1);
 }
 
-
-
 .chaos-icon-color {
   color: rgba(236, 72, 153, 1);
 }
-
-
 
 @keyframes pulse {
   0%,
