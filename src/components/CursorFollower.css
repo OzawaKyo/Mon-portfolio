@@ -15,10 +15,18 @@
     width: 100%;
     height: 100%;
     border-radius: 50%;
-    border: 2px solid rgba(219, 234, 254, 0.9);
+    border: 2px solid rgba(254, 233, 219, 0.9);
     box-sizing: border-box;
+    animation: spin 10s linear infinite;
 }
-
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
 .chaos-custom-cursor .custom-cursor-ring {
     border: 2px solid #ec4899;
     box-shadow: 0 0 10px rgba(236, 72, 153, 0.5);
