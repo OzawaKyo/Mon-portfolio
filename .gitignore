@@ -22,3 +22,39 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# Firebase
+.firebase/
+firebase-debug.log
+firebase-debug.*.log
+.firebaserc
+firebase.json
+firebase.rules
+firestore.rules
+storage.rules
+firebase-credentials.json
+serviceAccountKey.json
+google-services.json
+GoogleService-Info.plist
+.runtimeconfig.json
+
+# Firebase Hosting
+.hosting/
+
+# Firebase Functions
+functions/node_modules/
+functions/.env
+functions/.runtimeconfig.json
+functions/lib/
+functions/dist/
+
+# Firebase Emulators
+ui-debug.log
+emulator-debug.log
+emulator-data/
+
+# Firebase Local Development
+.firebase/
+firebase-debug.log
+firebase-debug.*.log
+.runtimeconfig.json

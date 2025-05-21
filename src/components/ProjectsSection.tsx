@@ -1,7 +1,6 @@
 import { useState } from "react"
 import { motion } from "framer-motion"
 import "./ProjectsSection.css"
-import placeHolder from "../assets/placeholder.png"
 import books from "../assets/books.png"
 import quarto from "../assets/quarto.png"
 import coding from "../assets/coding.jpg"
@@ -391,24 +390,5 @@ const ProjectsSection = () => {
     )
 }
 
-// Custom Game Icon component
-const GameIcon = ({ className }: { className?: string }) => (
-    <svg
-        xmlns="http://www.w3.org/2000/svg"
-        viewBox="0 0 24 24"
-        fill="none"
-        stroke="currentColor"
-        strokeWidth="2"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-        className={className}
-    >
-        <rect x="2" y="6" width="20" height="12" rx="2" />
-        <path d="M6 12h4" />
-        <path d="M8 10v4" />
-        <circle cx="16" cy="12" r="1" />
-        <circle cx="18" cy="10" r="1" />
-    </svg>
-)
 
 export default ProjectsSection

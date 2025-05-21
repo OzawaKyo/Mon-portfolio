@@ -1,6 +1,5 @@
 import { motion } from "framer-motion"
 import "./AboutSection.css"
-import swimmingpenguin from "../assets/swim.gif"
 
 const AboutSection = () => {
     const fadeIn = {

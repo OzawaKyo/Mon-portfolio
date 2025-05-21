@@ -1,19 +1,9 @@
-import { useState, useEffect } from "react"
+import { useState } from "react"
 import { Link } from "react-router-dom"
-// import { useChaosMode } from "../contexts/ChaosContext"
-// import { ChaosButton } from "./ChaosButton"
 import "./Navbar.css"
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false)
-  const [mounted, setMounted] = useState(false)
-//   const { chaosMode } = {
-//     chaosMode: false, // Remplacez ceci par votre logique de mode chaos
-//   }
-
-  useEffect(() => {
-    setMounted(true)
-  }, [])
 
   const toggleMenu = () => {
     setIsOpen(!isOpen)
