@@ -116,7 +116,7 @@ const HeroSection = () => {
                 <a href="#contact" className="outline-button">
                   Me contacter
                 </a>
-                <button className={`ghost-button `}>
+                {/* <button className={`ghost-button `}>
                   <>
                     <svg
                       width="16"
@@ -136,7 +136,7 @@ const HeroSection = () => {
                     </svg>
                     Mode Chaos
                   </>
-                </button>
+                </button> */}
               </motion.div>
             </div>
             <motion.div
