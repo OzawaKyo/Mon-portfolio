@@ -19,10 +19,10 @@ export const skillCategories: SkillCategory[] = [
     icon: "code",
     emoji: "👨‍💻",
     skills: [
+      { name: "TypeScript", level: 80, color: "blue-light" },
+      { name: "JavaScript", level: 75, color: "yellow" },
       { name: "C", level: 80, color: "gray" },
-      { name: "Java", level: 70, color: "red" },
-      { name: "JavaScript", level: 65, color: "yellow" },
-      { name: "TypeScript", level: 65, color: "blue-light" },
+      { name: "Java", level: 65, color: "red" },
       { name: "Python", level: 55, color: "blue" },
     ],
   },
@@ -31,11 +31,11 @@ export const skillCategories: SkillCategory[] = [
     icon: "layout-grid",
     emoji: "🎨",
     skills: [
+      { name: "Angular", level: 80, color: "red" },
       { name: "React", level: 70, color: "blue-light" },
-      { name: "Angular", level: 60, color: "red" },
+      { name: "HTML/CSS", level: 80, color: "orange" },
       { name: "vite", level: 70, color: "teal" },
       { name: "Next.js", level: 40, color: "blue" },
-      { name: "HTML/CSS", level: 80, color: "orange" },
     ],
   },
   {
@@ -43,8 +43,8 @@ export const skillCategories: SkillCategory[] = [
     icon: "server",
     emoji: "⚙️",
     skills: [
+      { name: "NestJS", level: 75, color: "red" },
       { name: "Spring Boot", level: 70, color: "green" },
-      { name: "Express.js", level: 60, color: "gray-dark" },
       { name: "Django", level: 50, color: "green-dark" },
     ],
   },
@@ -53,9 +53,9 @@ export const skillCategories: SkillCategory[] = [
     icon: "database",
     emoji: "🗄️",
     skills: [
-      { name: "PostgreSQL", level: 75, color: "blue-dark" },
+      { name: "PostgreSQL", level: 85, color: "blue-dark" },
       { name: "MySQL", level: 75, color: "blue" },
-      { name: "Firebase", level: 85, color: "yellow-dark" },
+      { name: "Firebase", level: 75, color: "yellow-dark" },
     ],
   },
   {
