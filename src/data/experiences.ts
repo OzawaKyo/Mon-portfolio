@@ -19,7 +19,7 @@ export const experiences: Experience[] = [
     period: "Septembre 2025 - Aujourd'hui",
     description:
       "Alternance en développement fullstack dans le cadre du cursus MAALSI au CESI Lyon. Conception et développement de fonctionnalités web, maintenance et évolution des applications internes de l'entreprise.",
-    skills: ["React", "TypeScript", "Spring Boot", "PostgreSQL", "Git"],
+    skills: ["Angular", "NestJS", "PostgreSQL", "TypeScript", "Git"],
     color: "blue",
     emoji: "💼",
   },
