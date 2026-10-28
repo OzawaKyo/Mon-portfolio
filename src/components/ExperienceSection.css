@@ -119,14 +119,14 @@
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
-    width: 1.75rem;
-    height: 1.75rem;
+    width: 1.5rem;
+    height: 1.5rem;
     background-color: white;
-    border: 2px solid rgba(0, 0, 0, 0.1);
     border-radius: 50%;
     z-index: 10;
     align-items: center;
     justify-content: center;
+    box-shadow: 0 0 0 4px hsl(var(--background)), 0 0 14px rgba(139, 92, 246, 0.35);
   }
 
   @media (min-width: 768px) {
@@ -137,21 +137,14 @@
 
   .dark .timeline-dot {
     background-color: #1f2937;
-    border-color: rgba(255, 255, 255, 0.12);
+    box-shadow: 0 0 0 4px hsl(var(--background)), 0 0 14px rgba(139, 92, 246, 0.5);
   }
 
   .timeline-dot-content {
-    width: 0.65rem;
-    height: 0.65rem;
+    width: 0.7rem;
+    height: 0.7rem;
     border-radius: 50%;
-  }
-
-  .timeline-dot-orange .timeline-dot-content {
-    background-color: #f97316;
-  }
-
-  .timeline-dot-blue .timeline-dot-content {
-    background-color: #3b82f6;
+    background: linear-gradient(135deg, #3b82f6, #8b5cf6, #f97316);
   }
   
   .experience-card {
