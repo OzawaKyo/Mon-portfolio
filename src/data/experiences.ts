@@ -33,7 +33,7 @@ export const experiences: Experience[] = [
     location: "Lyon, France",
     period: "2024 - 2026",
     description:
-      "Formation MAALSI (Manager en Architecture Appliquée aux Lignes et Systèmes d'Information), en alternance. Approfondissement du développement fullstack, de l'architecture logicielle et de la gestion de projet.",
+      "Formation MAALSI (Manager en Architecture et Applications Logicielles des Systèmes d'Information), titre RNCP niveau 7 (bac+5), en alternance. Approfondissement du développement fullstack, de l'architecture logicielle et de la gestion de projet.",
     skills: ["Architecture SI", "Développement web", "Gestion de projet", "Agile"],
     color: "purple",
     emoji: "🎓",
