@@ -39,6 +39,19 @@ export const experiences: Experience[] = [
     emoji: "🎓",
   },
   {
+    id: 5,
+    type: "education",
+    title: "Licence Informatique Générale (L3)",
+    company: "Université Grenoble Alpes (UGA)",
+    location: "Grenoble, France",
+    period: "2023 - 2024",
+    description:
+      "Intégration directe en L3 Informatique Générale après le cycle préparatoire à l'EMSI. Obtention de la licence.",
+    skills: ["Algorithmique", "Bases de données", "Génie logiciel", "Mathématiques"],
+    color: "purple",
+    emoji: "🎓",
+  },
+  {
     id: 1,
     type: "work",
     title: "Développeur Fullstack",
@@ -61,7 +74,7 @@ export const experiences: Experience[] = [
     description:
       "Cycle préparatoire puis première année du cycle ingénieur en Informatique & Réseaux (MIAGE). Bases en algorithmique, programmation, réseaux et mathématiques appliquées.",
     skills: ["Algorithmique", "Programmation", "Réseaux", "Mathématiques"],
-    color: "orange",
+    color: "purple",
     emoji: "📘",
   },
 ]
