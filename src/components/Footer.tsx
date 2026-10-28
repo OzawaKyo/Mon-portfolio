@@ -13,7 +13,7 @@ const Footer = () => {
             <a href="#hero" className="logo-text">
               <span className="logo-gradient">Mohamed.dev</span>
             </a>
-            <p className="footer-tagline">Étudiant en informatique à l&apos;Université Grenoble Alpes</p>
+            <p className="footer-tagline">Alternant développeur fullstack chez Sirap · CESI Lyon</p>
           </div>
 
           <div className="footer-social">

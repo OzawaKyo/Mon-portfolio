@@ -12,6 +12,18 @@ export interface Experience {
 
 export const experiences: Experience[] = [
   {
+    id: 2,
+    title: "Développeur Fullstack (Alternance)",
+    company: "Sirap",
+    location: "Romans-sur-Isère, France",
+    period: "Septembre 2025 - Aujourd'hui",
+    description:
+      "Alternance en développement fullstack dans le cadre du cursus MAALSI au CESI Lyon. Conception et développement de fonctionnalités web, maintenance et évolution des applications internes de l'entreprise.",
+    skills: ["React", "TypeScript", "Spring Boot", "PostgreSQL", "Git"],
+    color: "blue",
+    emoji: "💼",
+  },
+  {
     id: 1,
     title: "Développeur Fullstack",
     company: "Orange Telecom",

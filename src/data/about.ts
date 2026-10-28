@@ -12,14 +12,13 @@ export const aboutCards: AboutCard[] = [
   {
     icon: "book",
     title: "Formation",
-    description:
-      "2023 - 2025 : L3 Informatique à l'Université Grenoble Alpes. 2021 - 2023 : Cycle préparatoire & 1ère année du cycle ingénieur en Informatique & Réseaux (MIAGE) à EMSI.",
+    description: "2ème année MAALSI au CESI Lyon, en alternance chez Sirap en tant que développeur fullstack.",
     emoji: "🎓",
   },
   {
     icon: "map-pin",
     title: "Localisation",
-    description: "Grenoble, France",
+    description: "Lyon (études) & Romans-sur-Isère (alternance), France",
     emoji: "📍",
   },
   {

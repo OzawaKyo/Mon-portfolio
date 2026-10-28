@@ -93,13 +93,13 @@ const ContactSection = () => {
               <div className="job-card">
                 <h3 className="job-card-title">
                   <Icon name="sparkles" className="job-card-icon" />
-                  Recherche d&apos;alternance
+                  Ouvert aux opportunités
                 </h3>
                 <p className="job-card-description">
-                  Je suis à la recherche d&apos;une alternance à partir de septembre 2025 pour un Master en
-                  informatique.
+                  En alternance chez Sirap, je reste ouvert aux projets freelance, collaborations et opportunités
+                  intéressantes.
                 </p>
-                <a href="mailto:simoamarcha@icloud.com?subject=Opportunité d'alternance" className="job-card-button">
+                <a href="mailto:simoamarcha@icloud.com?subject=Opportunité de collaboration" className="job-card-button">
                   Me contacter pour une opportunité
                 </a>
               </div>

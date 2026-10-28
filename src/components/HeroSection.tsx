@@ -55,7 +55,7 @@ const HeroSection = () => {
               >
                 <span className="badge-content">
                   <Icon name="sparkles" size={16} className="badge-icon" />
-                  Étudiant en Informatique
+                  Alternant Développeur Fullstack
                 </span>
               </motion.div>
               <motion.h1
@@ -80,8 +80,8 @@ const HeroSection = () => {
                 animate={{ opacity: 1 }}
                 transition={{ delay: 0.5, duration: 0.5 }}
               >
-                Étudiant en L3 Informatique à l&apos;Université Grenoble Alpes, passionné par le développement web et
-                les nouvelles technologies. 💻
+                Étudiant en 2ème année MAALSI au CESI Lyon, actuellement en alternance chez Sirap en tant que
+                développeur fullstack. Passionné par le développement web et les nouvelles technologies. 💻
               </motion.p>
               <motion.div
                 className="hero-buttons"

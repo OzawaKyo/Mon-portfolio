@@ -29,8 +29,7 @@ const AboutSection = () => {
           <h2 className="section-title">À propos de moi</h2>
           <div className="section-divider"></div>
           <p className="section-description">
-            Étudiant passionné d&apos;informatique, je suis à la recherche d&apos;une alternance à partir de septembre
-            2025 pour un Master en informatique.
+            Étudiant passionné d&apos;informatique, en alternance chez Sirap en tant que développeur fullstack.
           </p>
         </motion.div>
 
@@ -48,8 +47,9 @@ const AboutSection = () => {
               </h3>
               <p className="card-text">
                 Je suis Mohamed Amarcha, un étudiant en informatique passionné par le développement web et les nouvelles
-                technologies. Actuellement en troisième année à l&apos;Université Grenoble Alpes, je cherche constamment
-                à approfondir mes connaissances et à relever de nouveaux défis.
+                technologies. Actuellement en 2ème année MAALSI au CESI Lyon, je suis en alternance chez Sirap à
+                Romans-sur-Isère en tant que développeur fullstack, où je continue d&apos;approfondir mes connaissances
+                et de relever de nouveaux défis.
               </p>
               <p className="card-text">
                 Mon parcours m&apos;a permis d&apos;acquérir des compétences variées en programmation et en conception
