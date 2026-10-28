@@ -119,28 +119,39 @@
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
-    width: 2rem;
-    height: 2rem;
+    width: 1.75rem;
+    height: 1.75rem;
     background-color: white;
-    border: 0.25rem solid #f97316;
+    border: 2px solid rgba(0, 0, 0, 0.1);
     border-radius: 50%;
     z-index: 10;
     align-items: center;
     justify-content: center;
   }
-  
+
   @media (min-width: 768px) {
     .timeline-dot {
       display: flex;
     }
   }
-  
+
   .dark .timeline-dot {
     background-color: #1f2937;
+    border-color: rgba(255, 255, 255, 0.12);
   }
-  
+
   .timeline-dot-content {
-    font-size: 1rem;
+    width: 0.65rem;
+    height: 0.65rem;
+    border-radius: 50%;
+  }
+
+  .timeline-dot-orange .timeline-dot-content {
+    background-color: #f97316;
+  }
+
+  .timeline-dot-blue .timeline-dot-content {
+    background-color: #3b82f6;
   }
   
   .experience-card {

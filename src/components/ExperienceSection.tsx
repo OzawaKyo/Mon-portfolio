@@ -94,15 +94,13 @@ const ExperienceSection = () => {
                   <div className="timeline-left">{isReversed ? details : card}</div>
 
                   {/* Timeline dot */}
-                  <div className="timeline-dot">
+                  <div className={`timeline-dot timeline-dot-${exp.color}`}>
                     <motion.div
-                      animate={{ rotate: 360 }}
-                      transition={{ repeat: Number.POSITIVE_INFINITY, duration: 10, ease: "linear" }}
+                      animate={{ scale: [1, 1.3, 1], opacity: [1, 0.65, 1] }}
+                      transition={{ repeat: Number.POSITIVE_INFINITY, duration: 2.5, ease: "easeInOut" }}
                       className="timeline-dot-content"
                       aria-hidden="true"
-                    >
-                      ⚡
-                    </motion.div>
+                    />
                   </div>
 
                   <div className="timeline-right">{isReversed ? card : details}</div>
