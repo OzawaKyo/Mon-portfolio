@@ -1,23 +1,6 @@
-import { useEffect, useState } from 'react'
 import './LoadingPage.css'
 
 export default function LoadingPage() {
-  const [progress, setProgress] = useState(0)
-
-  useEffect(() => {
-    const timer = setInterval(() => {
-      setProgress((prev) => {
-        if (prev >= 100) {
-          clearInterval(timer)
-          return 100
-        }
-        return prev + 1
-      })
-    }, 30)
-
-    return () => clearInterval(timer)
-  }, [])
-
   return (
     <div className="splash-loading-page">
       <div className="splash-loading-container">
@@ -28,14 +11,11 @@ export default function LoadingPage() {
             <span className="splash-logo-dot">.dev</span>
           </h1>
         </div>
-        
+
         <div className="splash-loading-bar-container">
-          <div 
-            className="splash-loading-bar" 
-            style={{ width: `${progress}%` }}
-          ></div>
+          <div className="splash-loading-bar"></div>
         </div>
-        
+
         <div className="splash-loading-shapes">
           <div className="splash-shape splash-shape-1"></div>
           <div className="splash-shape splash-shape-2"></div>
@@ -45,4 +25,4 @@ export default function LoadingPage() {
       </div>
     </div>
   )
-} 
+}

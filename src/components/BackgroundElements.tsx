@@ -96,14 +96,18 @@ export const ConstellationBackground = () => {
 
       container.appendChild(lineElement)
     })
+
+    return () => {
+      container.innerHTML = ""
+    }
   }, [])
 
-  return <div ref={constellationRef} className="constellation" />
+  return <div ref={constellationRef} className="constellation" aria-hidden="true" />
 }
 
 export const FloatingShapes = () => {
   return (
-    <div className="floating-shapes">
+    <div className="floating-shapes" aria-hidden="true">
       <motion.div
         className="floating-shape shape-blue"
         animate={{
@@ -165,7 +169,7 @@ export const FloatingShapes = () => {
 
 export const TechShapes = () => {
   return (
-    <div className="tech-shapes">
+    <div className="tech-shapes" aria-hidden="true">
       {/* Formes tech */}
       <motion.div
         className="tech-shape tech-shape-1"

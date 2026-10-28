@@ -60,10 +60,19 @@
 
 .splash-loading-bar {
   height: 100%;
+  width: 0%;
   background: linear-gradient(to right, #ec4899, #8b5cf6, #06b6d4);
   border-radius: 2px;
-  transition: width 0.3s ease;
-  animation: splash-gradient-shift 3s ease infinite;
+  animation: splash-fill 2.8s ease-out forwards, splash-gradient-shift 3s ease infinite;
+}
+
+@keyframes splash-fill {
+  from {
+    width: 0%;
+  }
+  to {
+    width: 100%;
+  }
 }
 
 .splash-loading-shapes {

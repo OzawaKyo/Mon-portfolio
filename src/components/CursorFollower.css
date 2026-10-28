@@ -27,10 +27,6 @@
     transform: rotate(360deg);
   }
 }
-.chaos-custom-cursor .custom-cursor-ring {
-    border: 2px solid #ec4899;
-    box-shadow: 0 0 10px rgba(236, 72, 153, 0.5);
-}
 
 .custom-cursor-dot {
     width: 8px;
@@ -38,10 +34,6 @@
     background-color: rgba(219, 234, 254, 0.9);
     border-radius: 50%;
     position: absolute;
-}
-
-.chaos-custom-cursor .custom-cursor-dot {
-    background-color: #ec4899;
 }
 
 .custom-cursor-clicked .custom-cursor-ring {
@@ -59,11 +51,6 @@
     z-index: 9998;
     transition: opacity 0.2s ease;
     mix-blend-mode: difference;
-}
-
-.chaos-custom-trail {
-    border-color: rgba(236, 72, 153, 0.5);
-    mix-blend-mode: normal;
 }
 
 /* Particules autour du curseur */
@@ -85,11 +72,6 @@
     margin-left: -2px;
 }
 
-.chaos-custom-cursor .custom-cursor-particle {
-    background-color: #ec4899;
-    box-shadow: 0 0 5px rgba(236, 72, 153, 0.8);
-}
-
 /* Effet de flou qui suit le curseur */
 .custom-cursor-blur {
     position: fixed;
@@ -103,16 +85,13 @@
     filter: blur(20px);
 }
 
-.chaos-custom-blur {
-    background: radial-gradient(circle, rgba(236, 72, 153, 0.15) 0%, rgba(236, 72, 153, 0) 70%);
-}
-
-/* Effets spéciaux pour les éléments interactifs */
-a:hover,
-button:hover,
-.clickable:hover {
-    cursor: none;
-    transition: transform 0.3s ease;
+/* Effets spéciaux pour les éléments interactifs (uniquement avec souris + sans préférence de mouvement réduit) */
+@media (hover: hover) and (pointer: fine) and (prefers-reduced-motion: no-preference) {
+    a:hover,
+    button:hover,
+    .clickable:hover {
+        cursor: none;
+    }
 }
 
 /* Animation pour les éléments interactifs */

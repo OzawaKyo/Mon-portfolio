@@ -1,5 +1,4 @@
 import { useState } from "react"
-import { Link } from "react-router-dom"
 import "./Navbar.css"
 
 const Navbar = () => {
@@ -34,13 +33,13 @@ const Navbar = () => {
   }
 
   return (
-    <nav className={`navbar `}>
+    <nav className="navbar">
       <div className="navbar-container">
         <div className="navbar-content">
           <div className="navbar-logo">
-            <Link to="/" className={`logo-text `} data-text="Mohamed.dev">
-              <span className={`logo-gradient `}>Mohamed.dev</span>
-            </Link>
+            <a href="#hero" className="logo-text" data-text="Mohamed.dev">
+              <span className="logo-gradient">Mohamed.dev</span>
+            </a>
           </div>
 
           {/* Desktop Navigation */}
@@ -50,20 +49,21 @@ const Navbar = () => {
                 key={item.name}
                 href={item.href}
                 onClick={(e) => handleScroll(e, item.href)}
-                className={`nav-item `}
+                className="nav-item"
               >
                 {item.name}
               </a>
             ))}
-
-            {/* Chaos Mode Button */}
-            {/* <ChaosButton /> */}
           </div>
 
           {/* Mobile Navigation Button */}
           <div className="mobile-nav-toggle">
-            {/* <ChaosButton /> */}
-            <button onClick={toggleMenu} aria-label="Toggle menu" className="menu-button">
+            <button
+              onClick={toggleMenu}
+              aria-label="Toggle menu"
+              aria-expanded={isOpen}
+              className="menu-button"
+            >
               {isOpen ? (
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path
@@ -92,14 +92,14 @@ const Navbar = () => {
 
       {/* Mobile Navigation Menu */}
       {isOpen && (
-        <div className={`mobile-menu `}>
+        <div className="mobile-menu">
           <div className="mobile-menu-items">
             {navItems.map((item) => (
               <a
                 key={item.name}
                 href={item.href}
                 onClick={(e) => handleScroll(e, item.href)}
-                className={`mobile-nav-item `}
+                className="mobile-nav-item"
               >
                 {item.name}
               </a>
