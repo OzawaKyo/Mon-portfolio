@@ -27,7 +27,7 @@ export default function ProjectCard({ project, isHovered, onHoverStart, onHoverE
       onMouseLeave={onHoverEnd}
       className="project-card"
     >
-      <div className="project-image-container">
+      <div className="project-image-container" data-cursor="Voir">
         <div className="project-image-overlay"></div>
         <motion.div
           className="project-emoji"

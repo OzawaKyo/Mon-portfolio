@@ -1,180 +1,96 @@
-import { useEffect, useRef, useState } from "react"
+import { useEffect, useState } from "react"
 import { motion, useMotionValue, useReducedMotion, useSpring } from "framer-motion"
 import "./CursorFollower.css"
-
-const TRAIL_COUNT = 5
 
 export default function CursorFollower() {
   const prefersReducedMotion = useReducedMotion()
   const [clicked, setClicked] = useState(false)
   const [hovered, setHovered] = useState(false)
+  const [cursorText, setCursorText] = useState("")
   const [visible, setVisible] = useState(false)
 
   const rawX = useMotionValue(0)
   const rawY = useMotionValue(0)
-  const mainX = useSpring(rawX, { damping: 25, stiffness: 300, mass: 0.5 })
-  const mainY = useSpring(rawY, { damping: 25, stiffness: 300, mass: 0.5 })
-  const blurX = useSpring(rawX, { damping: 50, stiffness: 200 })
-  const blurY = useSpring(rawY, { damping: 50, stiffness: 200 })
 
-  const trailsRef = useRef<HTMLDivElement[]>([])
-  const trailPositions = useRef(Array.from({ length: TRAIL_COUNT }, () => ({ x: 0, y: 0 })))
-  const mousePos = useRef({ x: 0, y: 0 })
-  const rafId = useRef<number | undefined>(undefined)
+  // Le point suit la souris quasiment sans délai
+  const dotX = useSpring(rawX, { damping: 40, stiffness: 900, mass: 0.2 })
+  const dotY = useSpring(rawY, { damping: 40, stiffness: 900, mass: 0.2 })
 
-  // Créer les éléments de traînée une seule fois (manipulation DOM directe pour éviter les re-renders)
-  useEffect(() => {
-    if (prefersReducedMotion) return
-
-    trailsRef.current = Array.from({ length: TRAIL_COUNT }, (_, i) => {
-      const div = document.createElement("div")
-      div.className = "custom-cursor-trail"
-      div.style.opacity = `${1 - i * 0.15}`
-      div.style.transform = `scale(${1 - i * 0.1})`
-      document.body.appendChild(div)
-      return div
-    })
-
-    const animateTrails = () => {
-      let prevX = mousePos.current.x
-      let prevY = mousePos.current.y
-
-      trailPositions.current.forEach((pos, i) => {
-        pos.x += (prevX - pos.x) * 0.3
-        pos.y += (prevY - pos.y) * 0.3
-        const trail = trailsRef.current[i]
-        if (trail) {
-          trail.style.transform = `translate(${pos.x}px, ${pos.y}px) scale(${1 - i * 0.1})`
-        }
-        prevX = pos.x
-        prevY = pos.y
-      })
-
-      rafId.current = requestAnimationFrame(animateTrails)
-    }
-    rafId.current = requestAnimationFrame(animateTrails)
-
-    return () => {
-      if (rafId.current) cancelAnimationFrame(rafId.current)
-      trailsRef.current.forEach((div) => {
-        if (div && document.body.contains(div)) {
-          document.body.removeChild(div)
-        }
-      })
-    }
-  }, [prefersReducedMotion])
+  // L'anneau traîne légèrement derrière, effet "magnétique" discret
+  const ringX = useSpring(rawX, { damping: 28, stiffness: 220, mass: 0.6 })
+  const ringY = useSpring(rawY, { damping: 28, stiffness: 220, mass: 0.6 })
 
   useEffect(() => {
     if (prefersReducedMotion) return
 
     const handleMouseMove = (e: MouseEvent) => {
-      mousePos.current = { x: e.clientX, y: e.clientY }
       rawX.set(e.clientX)
       rawY.set(e.clientY)
 
       setVisible((prev) => (prev ? prev : true))
 
       const target = e.target as HTMLElement
-      const isClickable = Boolean(
-        target.tagName.toLowerCase() === "a" ||
-          target.tagName.toLowerCase() === "button" ||
-          target.closest("a") ||
-          target.closest("button") ||
-          target.classList.contains("clickable") ||
-          target.closest(".clickable")
-      )
+      const interactive = target.closest<HTMLElement>("a, button, .clickable, [data-cursor]")
 
-      setHovered(isClickable)
+      setHovered(Boolean(interactive))
+      setCursorText(interactive?.dataset.cursor ?? "")
     }
 
     const handleMouseDown = () => setClicked(true)
     const handleMouseUp = () => setClicked(false)
+    const handleMouseLeave = () => setVisible(false)
 
     window.addEventListener("mousemove", handleMouseMove)
     window.addEventListener("mousedown", handleMouseDown)
     window.addEventListener("mouseup", handleMouseUp)
+    document.addEventListener("mouseleave", handleMouseLeave)
 
     return () => {
       window.removeEventListener("mousemove", handleMouseMove)
       window.removeEventListener("mousedown", handleMouseDown)
       window.removeEventListener("mouseup", handleMouseUp)
+      document.removeEventListener("mouseleave", handleMouseLeave)
     }
   }, [rawX, rawY, prefersReducedMotion])
 
   if (prefersReducedMotion || !visible) return null
 
-  const size = hovered ? 60 : 40
+  const ringSize = cursorText ? 90 : hovered ? 54 : 32
 
   return (
     <>
       <motion.div
-        className={`custom-cursor-main ${clicked ? "custom-cursor-clicked" : ""}`}
-        style={{
-          x: mainX,
-          y: mainY,
-          width: size,
-          height: size,
-          marginLeft: -size / 2,
-          marginTop: -size / 2,
-          backgroundColor: "rgba(254, 202, 202, 0.2)",
-          mixBlendMode: hovered ? "normal" : "difference",
-        }}
-        transition={{ type: "spring", damping: 25, stiffness: 300 }}
-      >
-        <motion.div
-          className="custom-cursor-ring"
-          animate={{
-            scale: clicked ? 0.8 : 1,
-            opacity: clicked ? 0.5 : 1,
-            rotate: [0, 360],
-          }}
-          transition={{
-            rotate: { repeat: Number.POSITIVE_INFINITY, duration: 10, ease: "linear" },
-            scale: { type: "spring", damping: 10, stiffness: 200 },
-          }}
-        />
-
-        {hovered && (
-          <motion.div className="custom-cursor-dot" initial={{ scale: 0 }} animate={{ scale: 1 }} exit={{ scale: 0 }} />
-        )}
-
-        <motion.div
-          className="custom-cursor-particles"
-          animate={{ rotate: 360 }}
-          transition={{ repeat: Number.POSITIVE_INFINITY, duration: 8, ease: "linear" }}
-        >
-          {Array.from({ length: 6 }).map((_, i) => (
-            <motion.div
-              key={i}
-              className="custom-cursor-particle"
-              style={{
-                transform: `rotate(${i * 60}deg) translateX(${hovered ? 25 : 15}px)`,
-              }}
-              animate={{
-                opacity: [0.7, 0.3, 0.7],
-                scale: [1, 1.2, 1],
-              }}
-              transition={{
-                repeat: Number.POSITIVE_INFINITY,
-                duration: 2,
-                delay: i * 0.3,
-                ease: "easeInOut",
-              }}
-            />
-          ))}
-        </motion.div>
-      </motion.div>
+        className="cursor-dot"
+        style={{ x: dotX, y: dotY }}
+        animate={{ opacity: hovered ? 0 : 1, scale: clicked ? 0.6 : 1 }}
+        transition={{ duration: 0.2 }}
+      />
 
       <motion.div
-        className="custom-cursor-blur"
-        style={{
-          x: blurX,
-          y: blurY,
-          marginLeft: -100,
-          marginTop: -100,
-          scale: clicked ? 1.2 : 1,
+        className="cursor-ring"
+        style={{ x: ringX, y: ringY }}
+        animate={{
+          width: ringSize,
+          height: ringSize,
+          marginLeft: -ringSize / 2,
+          marginTop: -ringSize / 2,
+          scale: clicked ? 0.85 : 1,
+          backgroundColor: hovered ? "rgba(255, 255, 255, 0.08)" : "transparent",
         }}
-      />
+        transition={{ type: "spring", damping: 20, stiffness: 300 }}
+      >
+        {cursorText && (
+          <motion.span
+            className="cursor-ring-text"
+            initial={{ opacity: 0, scale: 0.6 }}
+            animate={{ opacity: 1, scale: 1 }}
+            exit={{ opacity: 0, scale: 0.6 }}
+            transition={{ duration: 0.2 }}
+          >
+            {cursorText}
+          </motion.span>
+        )}
+      </motion.div>
     </>
   )
 }
