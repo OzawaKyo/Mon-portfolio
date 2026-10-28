@@ -31,7 +31,7 @@ export const skillCategories: SkillCategory[] = [
     icon: "layout-grid",
     emoji: "🎨",
     skills: [
-      { name: "Angular", level: 80, color: "red" },
+      { name: "Angular", level: 92, color: "red" },
       { name: "React", level: 70, color: "blue-light" },
       { name: "HTML/CSS", level: 80, color: "orange" },
       { name: "vite", level: 70, color: "teal" },
