@@ -194,6 +194,10 @@
   .experience-icon-blue {
     color: #3b82f6;
   }
+
+  .experience-icon-purple {
+    color: #8b5cf6;
+  }
   
   .experience-emoji {
     margin-left: 0.5rem;
@@ -292,6 +296,16 @@
   .dark .experience-skill-blue {
     background-color: rgba(59, 130, 246, 0.3);
     color: #60a5fa;
+  }
+
+  .experience-skill-purple {
+    background-color: rgba(139, 92, 246, 0.1);
+    color: #8b5cf6;
+  }
+
+  .dark .experience-skill-purple {
+    background-color: rgba(139, 92, 246, 0.3);
+    color: #a78bfa;
   }
   
   .looking-for-job {

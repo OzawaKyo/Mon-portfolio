@@ -14,9 +14,9 @@ const ExperienceSection = () => {
           transition={{ duration: 0.5 }}
           className="section-header"
         >
-          <h2 className="section-title">Mon expérience</h2>
+          <h2 className="section-title">Mon parcours</h2>
           <div className="section-divider"></div>
-          <p className="section-description">Mon parcours professionnel et mes stages.</p>
+          <p className="section-description">Mon parcours professionnel et académique.</p>
         </motion.div>
 
         <div className="timeline-container">
@@ -24,7 +24,8 @@ const ExperienceSection = () => {
           <div className="timeline-line"></div>
 
           {experiences.map((exp, index) => {
-            const isReversed = index % 2 === 1
+            // Le professionnel reste toujours à gauche, le scolaire toujours à droite
+            const isReversed = exp.type === "education"
 
             const card = (
               <motion.div
@@ -36,7 +37,10 @@ const ExperienceSection = () => {
               >
                 <div className="card-header">
                   <h3 className="experience-title">
-                    <Icon name="briefcase" className={`experience-icon experience-icon-${exp.color}`} />
+                    <Icon
+                      name={exp.type === "education" ? "book" : "briefcase"}
+                      className={`experience-icon experience-icon-${exp.color}`}
+                    />
                     {exp.title}
                     <span className="experience-emoji" aria-hidden="true">
                       {exp.emoji}

@@ -1,5 +1,6 @@
 export interface Experience {
   id: number
+  type: "work" | "education"
   title: string
   company: string
   location: string
@@ -12,7 +13,8 @@ export interface Experience {
 
 export const experiences: Experience[] = [
   {
-    id: 2,
+    id: 4,
+    type: "work",
     title: "Développeur Fullstack (Alternance)",
     company: "Sirap",
     location: "Romans-sur-Isère, France",
@@ -24,7 +26,21 @@ export const experiences: Experience[] = [
     emoji: "💼",
   },
   {
+    id: 3,
+    type: "education",
+    title: "Cursus MAALSI",
+    company: "CESI Lyon",
+    location: "Lyon, France",
+    period: "2024 - 2026",
+    description:
+      "Formation MAALSI (Manager en Architecture Appliquée aux Lignes et Systèmes d'Information), en alternance. Approfondissement du développement fullstack, de l'architecture logicielle et de la gestion de projet.",
+    skills: ["Architecture SI", "Développement web", "Gestion de projet", "Agile"],
+    color: "purple",
+    emoji: "🎓",
+  },
+  {
     id: 1,
+    type: "work",
     title: "Développeur Fullstack",
     company: "Orange Telecom",
     location: "Casablanca, Maroc",
@@ -34,5 +50,18 @@ export const experiences: Experience[] = [
     skills: ["Spring Boot", "Angular", "PostgreSQL", "Git", "Agile"],
     color: "orange",
     emoji: "📡",
+  },
+  {
+    id: 2,
+    type: "education",
+    title: "Cycle préparatoire & 1ère année ingénieur Informatique & Réseaux (MIAGE)",
+    company: "EMSI",
+    location: "Maroc",
+    period: "2021 - 2023",
+    description:
+      "Cycle préparatoire puis première année du cycle ingénieur en Informatique & Réseaux (MIAGE). Bases en algorithmique, programmation, réseaux et mathématiques appliquées.",
+    skills: ["Algorithmique", "Programmation", "Réseaux", "Mathématiques"],
+    color: "orange",
+    emoji: "📘",
   },
 ]
